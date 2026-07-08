@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kusetti Aditya Sai Kumar — Data Analytics Engineer</title>
+<meta name="description" content="Portfolio of Kusetti Aditya Sai Kumar, Data Analytics Engineer — projects, experience, and skills.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="hero">
+  <div class="hero-coord">42.3601° N, 71.0589° W — BOSTON, MA</div>
+  <svg class="orbit" viewBox="0 0 220 220" aria-hidden="true">
+    <circle class="orbit-ring" cx="110" cy="110" r="90"></circle>
+    <circle class="orbit-ring orbit-ring--inner" cx="110" cy="110" r="60"></circle>
+    <circle class="orbit-dot" cx="110" cy="20" r="4"></circle>
+  </svg>
+  <h1 class="hero-name">Kusetti Aditya<br>Sai Kumar</h1>
+  <p class="hero-role">Data Analytics Engineer</p>
+  <p class="hero-bio">I build pipelines and models that turn raw data — from satellite imagery to city bike networks — into decisions people can act on. Currently completing my MS in Data Analytics Engineering at Northeastern.</p>
+  <nav class="hero-links">
+    <a href="mailto:kusetti.a@northeastern.edu">Email</a>
+    <a href="https://linkedin.com/in/kusetti-aditya" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+  </nav>
+</header>
+
+<main>
+
+  <section id="experience" class="section">
+    <div class="section-head">
+      <span class="section-eyebrow">FIELD LOG</span>
+      <h2 class="section-title">Experience</h2>
+    </div>
+
+    <ol class="timeline">
+
+      <li class="entry">
+        <div class="entry-coord">42.3601° N, 71.0589° W<br>BOSTON, MA</div>
+        <div class="entry-body">
+          <div class="entry-top">
+            <h3>Graduate Teaching Assistant</h3>
+            <span class="entry-date">May 2026 — Aug 2026</span>
+          </div>
+          <p class="entry-org">Northeastern University · IE6600, Computation &amp; Visualization for Analytics</p>
+          <ul>
+            <li>Supported 60+ graduate students in mastering data visualization pipelines in Python and R, strengthening their project submissions.</li>
+            <li>Designed and delivered hands-on sessions on interactive dashboard development using Plotly, Dash, and Shiny for real-world engineering datasets.</li>
+            <li>Graded assignments with structured, rubric-based feedback to sharpen students' visualization design and analytical communication.</li>
+            <li>Coordinated with lead TAs and faculty to keep online and in-person instruction in sync, including extra coverage during the May–June intensive.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="entry">
+        <div class="entry-coord">17.3850° N, 78.4867° E<br>HYDERABAD, IN</div>
+        <div class="entry-body">
+          <div class="entry-top">
+            <h3>Research Intern</h3>
+            <span class="entry-date">Apr 2025 — Aug 2025</span>
+          </div>
+          <p class="entry-org">National Remote Sensing Centre — ISRO</p>
+          <ul>
+            <li>Developed hybrid quantum-classical ML pipelines in Python, Qiskit, and AWS Braket to accelerate satellite image processing for Earth observation.</li>
+            <li>Built and benchmarked grayscale image classification models, improving pattern recognition accuracy over classical baselines.</li>
+            <li>Quantified computational efficiency gains from quantum methods alongside research teams, contributing findings to internal technical reviews.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="entry">
+        <div class="entry-coord">13.0827° N, 80.2707° E<br>CHENNAI, IN</div>
+        <div class="entry-body">
+          <div class="entry-top">
+            <h3>Machine Learning Trainee</h3>
+            <span class="entry-date">Jan 2024 — Apr 2024</span>
+          </div>
+          <p class="entry-org">Cognibot</p>
+          <ul>
+            <li>Engineered and optimized predictive ML models in TensorFlow and scikit-learn, improving accuracy through systematic hyperparameter tuning and feature engineering.</li>
+            <li>Benchmarked algorithms across diverse datasets to identify top-performing approaches and guide product development decisions.</li>
+            <li>Presented model performance findings and actionable insights to cross-functional stakeholders.</li>
+          </ul>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-head">
+      <span class="section-eyebrow">BUILD LOG</span>
+      <h2 class="section-title">Projects</h2>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+        <h3>AI-Powered Job &amp; Co-op Finder</h3>
+        <p>Aggregates listings across four job APIs, enriches each posting with an LLM (skills, salary, visa sponsorship), and flags roles that support international students — served through a live search dashboard.</p>
+        <ul class="tech-list">
+          <li>Python</li><li>MongoDB</li><li>Groq / Llama</li><li>Streamlit</li>
+        </ul>
+        <div class="project-links">
+          <a href="#" class="project-link">Repository ↗</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <h3>Boston Bluebikes Analytics Pipeline</h3>
+        <p>An end-to-end lakehouse for city bike-share data: raw trips land in Delta Lake, get modeled with dbt, and surface as station-demand and member-vs-casual ridership insights on a dashboard.</p>
+        <ul class="tech-list">
+          <li>Databricks</li><li>Delta Lake</li><li>dbt</li><li>SQL</li>
+        </ul>
+        <div class="project-links">
+          <a href="#" class="project-link">Repository ↗</a>
+        </div>
+      </article>
+
+    </div>
+    <p class="project-note">Repository links coming soon — swap the <code>#</code> hrefs in the project cards once your repos are public.</p>
+  </section>
+
+  <section id="education" class="section">
+    <div class="section-head">
+      <span class="section-eyebrow">TRAINING DATA</span>
+      <h2 class="section-title">Education</h2>
+    </div>
+
+    <ul class="edu-list">
+      <li class="edu-entry">
+        <div class="entry-top">
+          <h3>Northeastern University</h3>
+          <span class="entry-date">Dec 2027</span>
+        </div>
+        <p class="entry-org">Master of Science in Data Analytics Engineering · Boston, MA</p>
+        <p class="edu-courses">Foundations of Data Analytics, Data Management for Analytics, Data Mining in Engineering, Computation and Visualization</p>
+      </li>
+      <li class="edu-entry">
+        <div class="entry-top">
+          <h3>Sathyabama Institute of Science and Technology</h3>
+          <span class="entry-date">Jul 2025</span>
+        </div>
+        <p class="entry-org">B.E. in Computer Science and Engineering, Data Science specialization · Chennai, India</p>
+        <p class="edu-courses">Python, R, Machine Learning, Database Management Systems, Operating Systems</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="section-head">
+      <span class="section-eyebrow">STACK</span>
+      <h2 class="section-title">Skills</h2>
+    </div>
+
+    <div class="skill-groups">
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <p>Python, R, SQL</p>
+      </div>
+      <div class="skill-group">
+        <h3>Libraries &amp; Frameworks</h3>
+        <p>NumPy, Pandas, scikit-learn, TensorFlow, Matplotlib</p>
+      </div>
+      <div class="skill-group">
+        <h3>Analysis &amp; Visualization</h3>
+        <p>Tableau, Excel</p>
+      </div>
+      <div class="skill-group">
+        <h3>Tools &amp; Platforms</h3>
+        <p>Git, VS Code, Linux</p>
+      </div>
+      <div class="skill-group">
+        <h3>Databases</h3>
+        <p>SQL, MongoDB</p>
+      </div>
+      <div class="skill-group">
+        <h3>Certifications</h3>
+        <p>Data Analytics with Python (NPTEL), MATLAB for Data Processing and Visualization (MathWorks), Oracle Certified Foundations Associate, Geodata Processing using Python and ML (IIRS Outreach)</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-coord">42.3601° N, 71.0589° W</div>
+  <p>Kusetti Aditya Sai Kumar</p>
+  <nav class="footer-links">
+    <a href="mailto:kusetti.a@northeastern.edu">kusetti.a@northeastern.edu</a>
+    <a href="https://linkedin.com/in/kusetti-aditya" target="_blank" rel="noopener">linkedin.com/in/kusetti-aditya</a>
+  </nav>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
