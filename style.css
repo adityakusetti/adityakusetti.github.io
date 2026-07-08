@@ -73,63 +73,26 @@ a:focus-visible {
   margin: 0 auto;
   padding: 4.5rem 1.5rem 5rem;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
 }
 
-.hero-coord {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  color: var(--signal);
-  margin-bottom: 2.5rem;
-}
-
-.orbit-wrap {
-  position: absolute;
-  top: 1rem;
-  right: 0.5rem;
-  width: 150px;
-  height: 150px;
-}
-.orbit {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.55;
-}
-.orbit-ring {
-  fill: none;
-  stroke: var(--line);
-  stroke-width: 1;
-}
-.orbit-ring--inner {
-  stroke: var(--line);
-  stroke-dasharray: 2 4;
-}
-.orbit-dot {
-  fill: var(--marker);
-  transform-origin: 110px 110px;
-  animation: spin 18s linear infinite;
-}
-@keyframes spin {
-  to { transform: rotate(360deg); }
+.hero-text {
+  flex: 1;
+  min-width: 0;
 }
 
 .portrait {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
+  flex-shrink: 0;
+  width: 176px;
+  height: 176px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--paper);
+  border: 3px solid var(--paper);
   outline: 1px solid var(--line);
-  box-shadow: 0 2px 10px rgba(20, 24, 31, 0.08);
+  box-shadow: 0 4px 18px rgba(20, 24, 31, 0.10);
 }
 
 .hero-name {
@@ -206,20 +169,6 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 2.6rem;
-}
-
-.entry {
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 1.5rem;
-}
-
-.entry-coord {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--ink-soft);
-  line-height: 1.5;
-  padding-top: 0.2rem;
 }
 
 .entry-top {
@@ -376,13 +325,6 @@ a:focus-visible {
   z-index: 1;
 }
 
-.footer-coord {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--signal);
-  margin-bottom: 0.6rem;
-}
-
 .footer p {
   font-family: var(--font-display);
   font-weight: 600;
@@ -401,25 +343,24 @@ a:focus-visible {
 /* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 640px) {
-  .entry {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 1.5rem;
   }
-  .entry-coord {
-    padding-top: 0;
+  .hero-bio {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-links {
+    justify-content: center;
+  }
+  .portrait {
+    width: 120px;
+    height: 120px;
   }
   .project-grid, .skill-groups {
     grid-template-columns: 1fr;
-  }
-  .orbit-wrap {
-    width: 100px;
-    height: 100px;
-    top: 0;
-    right: 0;
-  }
-  .portrait {
-    width: 56px;
-    height: 56px;
   }
 }
 
