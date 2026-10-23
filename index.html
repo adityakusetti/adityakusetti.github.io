@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aditya Sai Kumar Kusetti — Data Analytics Engineer</title>
-<meta name="description" content="Portfolio of Aditya Sai Kumar Kusetti, Data Analytics Engineer — projects, experience, and skills.">
+<meta name="description" content="Portfolio of Aditya Sai Kumar Kusetti, Data Analytics Engineer — data pipelines, forecasting, anomaly detection, and search projects.">
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="favicon.png">
@@ -13,21 +13,40 @@
 <!-- Social preview (LinkedIn, Slack, iMessage, etc.) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Aditya Sai Kumar Kusetti — Data Analytics Engineer">
-<meta property="og:description" content="Portfolio — projects, experience, and skills in data analytics engineering.">
+<meta property="og:description" content="Portfolio — data pipelines, forecasting, anomaly detection, and search projects.">
 <meta property="og:image" content="https://kusettiaditya.me/og-image.png">
 <meta property="og:url" content="https://kusettiaditya.me/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Aditya Sai Kumar Kusetti — Data Analytics Engineer">
-<meta name="twitter:description" content="Portfolio — projects, experience, and skills in data analytics engineering.">
+<meta name="twitter:description" content="Portfolio — data pipelines, forecasting, anomaly detection, and search projects.">
 <meta name="twitter:image" content="https://kusettiaditya.me/og-image.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<!-- Small additions for the project status notes; everything else uses style.css -->
+<style>
+  .status-badge {
+    display: inline-block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    opacity: 0.85;
+    margin-bottom: 0.6rem;
+  }
+  .section-note { font-size: 0.95rem; opacity: 0.8; margin: -0.4rem 0 1.2rem; }
+  .project-card ul.highlights { margin: 0.5rem 0 0.8rem 1.1rem; padding: 0; }
+  .project-card ul.highlights li { margin-bottom: 0.3rem; }
+  .status-note { font-size: 0.9rem; opacity: 0.85; margin-top: 0.4rem; }
+</style>
 </head>
 <body>
-
 <div class="grain"></div>
 
 <header class="hero">
@@ -35,9 +54,9 @@
     <h1 class="hero-name">Aditya Sai Kumar<br>Kusetti</h1>
     <p class="hero-role">Data Analytics Engineer</p>
     <p class="hero-tagline">I ❤ data</p>
-    <p class="hero-bio">I build pipelines and models that turn raw data — from satellite imagery to city bike networks — into decisions people can act on. Currently completing my MS in Data Analytics Engineering at Northeastern.</p>
+    <p class="hero-bio">I build data pipelines, forecasting and anomaly detection models, and search systems that turn raw data — from satellite imagery to city bike networks — into decisions people can act on. Currently completing my MS in Data Analytics Engineering at Northeastern (expected December 2027).</p>
     <nav class="hero-links">
-      <a href="mailto:kusetti.a@northeastern.edu">Email</a>
+      <a href="mailto:aditya.kusetti@gmail.com">Email</a>
       <a href="https://github.com/adityakusetti" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/adityakusetti/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="#projects">Projects</a>
@@ -54,55 +73,49 @@
       <span class="section-eyebrow">FIELD LOG</span>
       <h2 class="section-title">Experience</h2>
     </div>
-
     <ol class="timeline">
-
       <li class="entry">
         <div class="entry-body">
           <div class="entry-top">
             <h3>Graduate Teaching Assistant</h3>
-            <span class="entry-date">May 2026 — Aug 2026</span>
+            <span class="entry-date">May 2026 — Present</span>
           </div>
-          <p class="entry-org">Northeastern University · IE6600, Computation &amp; Visualization for Analytics</p>
+          <p class="entry-org">Northeastern University · DADS6600, Computation &amp; Visualization for Analytics</p>
           <ul>
-            <li>Supported 60+ graduate students in mastering data visualization pipelines in Python and R, strengthening their project submissions.</li>
-            <li>Designed and delivered hands-on sessions on interactive dashboard development using Plotly, Dash, and Shiny for real-world engineering datasets.</li>
-            <li>Graded assignments with structured, rubric-based feedback to sharpen students' visualization design and analytical communication.</li>
-            <li>Coordinated with lead TAs and faculty to keep online and in-person instruction in sync, including extra coverage during the May–June intensive.</li>
+            <li>Support 60+ graduate students, answering questions on coursework, assignments, and technical issues.</li>
+            <li>Grade assignments, quizzes, and hands-on sessions against faculty rubrics, and hold office hours covering Python programming, data analysis, and visualization techniques.</li>
+            <li>Maintain course content and publish weekly module announcements with learning objectives, deliverables, and deadlines.</li>
+            <li>Collaborate with professors, fellow TAs, and course managers to resolve student concerns and keep grading accurate, and troubleshoot Coursera, dataset, and Jupyter Notebook issues.</li>
           </ul>
         </div>
       </li>
-
       <li class="entry">
         <div class="entry-body">
           <div class="entry-top">
             <h3>Research Intern</h3>
-            <span class="entry-date">Apr 2025 — Aug 2025</span>
+            <span class="entry-date">May 2025 — Aug 2025</span>
           </div>
-          <p class="entry-org">National Remote Sensing Centre — ISRO</p>
+          <p class="entry-org">Indian Space Research Organisation (ISRO) — National Remote Sensing Centre · Hyderabad, India</p>
           <ul>
-            <li>Developed hybrid quantum-classical ML pipelines in Python, Qiskit, and AWS Braket to accelerate satellite image processing for Earth observation.</li>
-            <li>Built and benchmarked grayscale image classification models, improving pattern recognition accuracy over classical baselines.</li>
-            <li>Quantified computational efficiency gains from quantum methods alongside research teams, contributing findings to internal technical reviews.</li>
+            <li>Developed a hybrid quantum-classical machine learning model in Python with Qiskit that encodes grayscale images into qubits for digit classification, and ran experiments on Amazon Braket and IBM Quantum Composer.</li>
+            <li>Benchmarked the model against classical baselines on accuracy and computational efficiency to assess quantum approaches for satellite image processing.</li>
+            <li>Supported a scientist's route optimization study in QGIS by collecting and batching geo-coordinates and running route optimization on the batched points.</li>
           </ul>
         </div>
       </li>
-
       <li class="entry">
         <div class="entry-body">
           <div class="entry-top">
             <h3>Machine Learning Trainee</h3>
             <span class="entry-date">Jan 2024 — Apr 2024</span>
           </div>
-          <p class="entry-org">Cognibot</p>
+          <p class="entry-org">Cognibot · Remote</p>
           <ul>
             <li>Engineered and optimized predictive ML models in TensorFlow and scikit-learn, improving accuracy through systematic hyperparameter tuning and feature engineering.</li>
-            <li>Benchmarked algorithms across diverse datasets to identify top-performing approaches and guide product development decisions.</li>
-            <li>Presented model performance findings and actionable insights to cross-functional stakeholders.</li>
+            <li>Benchmarked algorithms across diverse datasets to identify the top-performing approaches.</li>
           </ul>
         </div>
       </li>
-
     </ol>
   </section>
 
@@ -111,28 +124,47 @@
       <span class="section-eyebrow">BUILD LOG</span>
       <h2 class="section-title">Projects</h2>
     </div>
-
+    <p class="section-note">Both projects are live and in active development. Each card lists what is currently being added.</p>
     <div class="project-grid">
 
       <article class="project-card">
-        <h3>AI-Powered Job &amp; Co-op Finder</h3>
-        <p>Aggregates listings across four job APIs, enriches each posting with an LLM (skills, salary, visa sponsorship), and flags roles that support international students — served through a live search dashboard.</p>
-        <ul class="tech-list">
-          <li>Python</li><li>MongoDB</li><li>Groq / Llama</li><li>Streamlit</li>
+        <span class="status-badge">In active development</span>
+        <h3>Bluebikes Live Analytics Platform</h3>
+        <p>An end-to-end system for Boston's bike-share network: live station data every 5 minutes, a warehouse of historical trips, demand forecasting, anomaly detection, and pipeline monitoring.</p>
+        <ul class="highlights">
+          <li>Built 5-minute ingestion of the Bluebikes GBFS feed (about 630 stations per snapshot) into PostgreSQL with Row Level Security, plus a freshness check that flagged a 6.8-day and a 3.8-day outage.</li>
+          <li>Loaded 29 months of trips (11.9M raw rows) into BigQuery and modeled them with 8 dbt models and 21 passing data tests, producing an hourly feature table of 11.8M station-hours.</li>
+          <li>Trained a LightGBM demand forecast that cut test MAE by 19.9% (0.787 to 0.630) against a seasonal-naive baseline on a time-based hold-out.</li>
+          <li>Evaluated anomaly detectors on injected faults; a city-adjusted z-score caught 76% of faults at stations expecting 25 or more trips, at a 0.19% hourly false-alarm rate.</li>
+          <li>Deployed a FastAPI service on Google Cloud Run, a public Streamlit dashboard, and a Grafana pipeline-health dashboard.</li>
         </ul>
+        <ul class="tech-list">
+          <li>Python</li><li>SQL</li><li>BigQuery</li><li>dbt</li><li>LightGBM</li><li>FastAPI</li><li>Grafana</li>
+        </ul>
+        <p class="status-note">In progress: adding weather features to the demand forecast and moving data collection to a cloud scheduler.</p>
         <div class="project-links">
-          <a href="#" class="project-link">Repository ↗</a>
+          <a href="https://bluebikes-live.streamlit.app/" class="project-link" target="_blank" rel="noopener">Live dashboard ↗</a>
+          <a href="https://github.com/adityakusetti/bluebikes-dashboard" class="project-link" target="_blank" rel="noopener">Dashboard repository ↗</a>
         </div>
       </article>
 
       <article class="project-card">
-        <h3>Boston Bluebikes Analytics Pipeline</h3>
-        <p>An end-to-end lakehouse for city bike-share data: raw trips land in Delta Lake, get modeled with dbt, and surface as station-demand and member-vs-casual ridership insights on a dashboard.</p>
-        <ul class="tech-list">
-          <li>Databricks</li><li>Delta Lake</li><li>dbt</li><li>SQL</li>
+        <span class="status-badge">In active development</span>
+        <h3>AI-Powered Job &amp; Co-op Finder</h3>
+        <p>A co-op and internship search platform with a built-in search evaluation, comparing how well keyword, embedding, and hybrid retrieval find the right postings.</p>
+        <ul class="highlights">
+          <li>Aggregates postings from multiple job APIs into MongoDB Atlas, with idempotent upserts, scheduled runs, and API quota tracking.</li>
+          <li>Merges different API schemas into one deduplicated collection of 3,410 postings.</li>
+          <li>Implemented BM25 from scratch and verified it against rank_bm25, and built dense (all-MiniLM-L6-v2) and Reciprocal Rank Fusion hybrid retrieval.</li>
+          <li>Evaluated all three on 15 hand-labeled queries: dense retrieval reached nDCG@10 of 0.72, compared with 0.59 for hybrid and 0.52 for BM25.</li>
+          <li>Added question answering over the top 5 retrieved postings, with numbered citations to its sources.</li>
         </ul>
+        <ul class="tech-list">
+          <li>Python</li><li>MongoDB Atlas</li><li>BM25</li><li>Embeddings</li><li>Groq</li><li>Streamlit</li>
+        </ul>
+        <p class="status-note">In progress: new search and filtering features.</p>
         <div class="project-links">
-          <a href="#" class="project-link">Repository ↗</a>
+          <a href="https://jobfinder-search.streamlit.app/" class="project-link" target="_blank" rel="noopener">Live search app ↗</a>
         </div>
       </article>
 
@@ -144,23 +176,22 @@
       <span class="section-eyebrow">TRAINING DATA</span>
       <h2 class="section-title">Education</h2>
     </div>
-
     <ul class="edu-list">
       <li class="edu-entry">
         <div class="entry-top">
           <h3>Northeastern University</h3>
-          <span class="entry-date">Dec 2027</span>
+          <span class="entry-date">Expected Dec 2027</span>
         </div>
-        <p class="entry-org">Master of Science in Data Analytics Engineering · Boston, MA</p>
-        <p class="edu-courses">Foundations of Data Analytics, Data Management for Analytics, Data Mining in Engineering, Computation and Visualization</p>
+        <p class="entry-org">Master of Science in Data Analytics Engineering · Boston, MA · GPA 3.82/4.0</p>
+        <p class="edu-courses">Deep Learning for AI, Applied Generative AI, Data Mining in Engineering, Foundations of Data Analytics, Data Management for Analytics</p>
       </li>
       <li class="edu-entry">
         <div class="entry-top">
           <h3>Sathyabama Institute of Science and Technology</h3>
-          <span class="entry-date">Jul 2025</span>
+          <span class="entry-date">May 2025</span>
         </div>
-        <p class="entry-org">B.E. in Computer Science and Engineering, Data Science specialization · Chennai, India</p>
-        <p class="edu-courses">Python, R, Machine Learning, Database Management Systems, Operating Systems</p>
+        <p class="entry-org">B.E. in Computer Science and Engineering, Data Science specialization · Chennai, India · CGPA 8.1/10, First Class with Distinction</p>
+        <p class="edu-courses">Python, Machine Learning, Database Management Systems, Operating Systems</p>
       </li>
     </ul>
   </section>
@@ -170,31 +201,34 @@
       <span class="section-eyebrow">STACK</span>
       <h2 class="section-title">Skills</h2>
     </div>
-
     <div class="skill-groups">
       <div class="skill-group">
         <h3>Languages</h3>
-        <p>Python, R, SQL</p>
+        <p>Python, SQL, TypeScript, JavaScript</p>
       </div>
       <div class="skill-group">
-        <h3>Libraries &amp; Frameworks</h3>
-        <p>NumPy, Pandas, scikit-learn, TensorFlow, Matplotlib</p>
+        <h3>Data Engineering</h3>
+        <p>dbt, BigQuery, PostgreSQL (Supabase), MongoDB Atlas, Airflow, Spark, Kafka, Google Cloud Run, ETL and API ingestion pipelines, data quality monitoring</p>
       </div>
       <div class="skill-group">
-        <h3>Analysis &amp; Visualization</h3>
-        <p>Tableau, Excel</p>
+        <h3>Machine Learning &amp; AI</h3>
+        <p>scikit-learn, LightGBM, TensorFlow, time-series forecasting, anomaly detection, MLflow, LLMs (Groq), information retrieval (BM25, dense and hybrid)</p>
       </div>
       <div class="skill-group">
-        <h3>Tools &amp; Platforms</h3>
-        <p>Git, VS Code, Linux</p>
+        <h3>Analytics &amp; Visualization</h3>
+        <p>Tableau, Grafana, Streamlit, Excel</p>
       </div>
       <div class="skill-group">
-        <h3>Databases</h3>
-        <p>SQL, MongoDB</p>
+        <h3>Geospatial &amp; Quantum</h3>
+        <p>QGIS, Qiskit, Amazon Braket, IBM Quantum Composer</p>
+      </div>
+      <div class="skill-group">
+        <h3>Tools</h3>
+        <p>Git, GitHub, GitLab, GitHub Actions (CI/CD), Linux, Cursor, Claude Code</p>
       </div>
       <div class="skill-group">
         <h3>Certifications</h3>
-        <p>Data Analytics with Python (NPTEL), MATLAB for Data Processing and Visualization (MathWorks), Oracle Certified Foundations Associate, Geodata Processing using Python and ML (IIRS Outreach)</p>
+        <p><a href="https://learn.microsoft.com/api/credentials/share/en-us/KusettiAdityaSaiKumar-8776/701B523C93B0BF07?sharingId=BCB0F418534E19BD" target="_blank" rel="noopener">Microsoft Certified: Azure Data Fundamentals (DP-900)</a></p>
       </div>
     </div>
   </section>
@@ -204,7 +238,7 @@
 <footer class="footer">
   <p>Aditya Sai Kumar Kusetti</p>
   <nav class="footer-links">
-    <a href="mailto:kusetti.a@northeastern.edu">kusetti.a@northeastern.edu</a>
+    <a href="mailto:aditya.kusetti@gmail.com">aditya.kusetti@gmail.com</a>
     <a href="https://github.com/adityakusetti" target="_blank" rel="noopener">github.com/adityakusetti</a>
     <a href="https://www.linkedin.com/in/adityakusetti/" target="_blank" rel="noopener">linkedin.com/in/adityakusetti</a>
   </nav>
