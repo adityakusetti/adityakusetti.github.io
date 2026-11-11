@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aditya Sai Kumar Kusetti — Data Analytics Engineer</title>
-<meta name="description" content="Portfolio of Aditya Sai Kumar Kusetti, Data Analytics Engineer — data pipelines, forecasting, anomaly detection, and search projects.">
+<title>Aditya Sai Kumar Kusetti — Data &amp; AI Engineer</title>
+<meta name="description" content="Portfolio of Aditya Sai Kumar Kusetti, Data &amp; AI Engineer — data pipelines, AI code review, forecasting, and search projects.">
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="favicon.png">
@@ -12,13 +12,13 @@
 
 <!-- Social preview (LinkedIn, Slack, iMessage, etc.) -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Aditya Sai Kumar Kusetti — Data Analytics Engineer">
-<meta property="og:description" content="Portfolio — data pipelines, forecasting, anomaly detection, and search projects.">
+<meta property="og:title" content="Aditya Sai Kumar Kusetti — Data &amp; AI Engineer">
+<meta property="og:description" content="Portfolio — data pipelines, AI code review, forecasting, and search projects.">
 <meta property="og:image" content="https://kusettiaditya.me/og-image.png">
 <meta property="og:url" content="https://kusettiaditya.me/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Aditya Sai Kumar Kusetti — Data Analytics Engineer">
-<meta name="twitter:description" content="Portfolio — data pipelines, forecasting, anomaly detection, and search projects.">
+<meta name="twitter:title" content="Aditya Sai Kumar Kusetti — Data &amp; AI Engineer">
+<meta name="twitter:description" content="Portfolio — data pipelines, AI code review, forecasting, and search projects.">
 <meta name="twitter:image" content="https://kusettiaditya.me/og-image.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,9 +52,9 @@
 <header class="hero">
   <div class="hero-text">
     <h1 class="hero-name">Aditya Sai Kumar<br>Kusetti</h1>
-    <p class="hero-role">Data Analytics Engineer</p>
+    <p class="hero-role">Data &amp; AI Engineer</p>
     <p class="hero-tagline">I ❤ data</p>
-    <p class="hero-bio">I build data pipelines, forecasting and anomaly detection models, and search systems that turn raw data — from satellite imagery to city bike networks — into decisions people can act on. Currently completing my MS in Data Analytics Engineering at Northeastern (expected December 2027).</p>
+    <p class="hero-bio">I build data pipelines and AI tools that people can trust: live data systems, AI agents with guardrails, and evaluations that show what actually works — from satellite imagery to city bike networks. Currently completing my MS in Data Analytics Engineering at Northeastern (expected December 2027). Open to Spring 2027 co-ops, full-time from January to August 2027, and open to relocating.</p>
     <nav class="hero-links">
       <a href="mailto:aditya.kusetti@gmail.com">Email</a>
       <a href="https://github.com/adityakusetti" target="_blank" rel="noopener">GitHub</a>
@@ -124,8 +124,29 @@
       <span class="section-eyebrow">BUILD LOG</span>
       <h2 class="section-title">Projects</h2>
     </div>
-    <p class="section-note">Both projects are live and in active development. Each card lists what is currently being added.</p>
+    <p class="section-note">All three projects are live and in active development. Each card lists what is currently being added.</p>
     <div class="project-grid">
+
+      <article class="project-card">
+        <span class="status-badge">New · Live</span>
+        <h3>Grainline: AI-Assisted SDLC for Data Pipelines</h3>
+        <p>An AI code reviewer that catches the data bugs generic reviewers miss, with proof. When a pull request changes SQL, Grainline runs the old and new versions on sample data and shows exactly which rows changed. Only tools and data can block a release; the AI explains and suggests.</p>
+        <ul class="highlights">
+          <li>Connects GitHub issues, pull-request review, tests, and a release verdict (Ready, Needs Review, or Blocked), shipped as a reusable GitHub Action and a live Streamlit app.</li>
+          <li>Built a data proof that reruns changed SQL on fixture data and compares row counts, duplicate keys, NULL rates, and values, catching join fan-out bugs such as a refund join that double-counts revenue.</li>
+          <li>Benchmarked on 12 planted bugs and 3 clean changes over 3 runs: LLM plus rules caught 94% of bugs, compared with 75% for the LLM alone, and the rules raised 0 false alarms.</li>
+          <li>Added scans for secrets, malware-style code, phishing-style links, and personal data such as card and Social Security numbers, plus requirement-to-test traceability.</li>
+          <li>Reviews Python, SQL, and Go changes, with validated LLM output, a 5-finding noise budget, retries, and 26 unit tests.</li>
+        </ul>
+        <ul class="tech-list">
+          <li>Python</li><li>LLMs (Groq)</li><li>GitHub Actions</li><li>GitHub API</li><li>SQL</li><li>pytest</li><li>Streamlit</li><li>Docker</li>
+        </ul>
+        <p class="status-note">In progress: a DuckDB engine for warehouse-style SQL, and inline comments on the exact changed lines.</p>
+        <div class="project-links">
+          <a href="https://grainline-ai.streamlit.app" class="project-link" target="_blank" rel="noopener">Live demo ↗</a>
+          <a href="https://github.com/adityakusetti/Grainline" class="project-link" target="_blank" rel="noopener">Repository ↗</a>
+        </div>
+      </article>
 
       <article class="project-card">
         <span class="status-badge">In active development</span>
@@ -133,13 +154,15 @@
         <p>An end-to-end system for Boston's bike-share network: live station data every 5 minutes, a warehouse of historical trips, demand forecasting, anomaly detection, and pipeline monitoring.</p>
         <ul class="highlights">
           <li>Built 5-minute ingestion of the Bluebikes GBFS feed (about 630 stations per snapshot) into PostgreSQL with Row Level Security, plus a freshness check that flagged a 6.8-day and a 3.8-day outage.</li>
-          <li>Loaded 29 months of trips (11.9M raw rows) into BigQuery and modeled them with 8 dbt models and 21 passing data tests, producing an hourly feature table of 11.8M station-hours.</li>
+          <li>Migrated the warehouse from Snowflake to BigQuery, loading 29 months of trips (11.9M raw rows) and modeling them with 8 dbt models and 21 passing data tests, producing an hourly feature table of 11.8M station-hours.</li>
+          <li>Automated a job that moves live Supabase snapshots to BigQuery every 15 days, keeping the operational database within its storage limit.</li>
           <li>Trained a LightGBM demand forecast that cut test MAE by 19.9% (0.787 to 0.630) against a seasonal-naive baseline on a time-based hold-out.</li>
           <li>Evaluated anomaly detectors on injected faults; a city-adjusted z-score caught 76% of faults at stations expecting 25 or more trips, at a 0.19% hourly false-alarm rate.</li>
           <li>Deployed a FastAPI service on Google Cloud Run, a public Streamlit dashboard, and a Grafana pipeline-health dashboard.</li>
+          <li>Built an MCP server that lets Claude answer plain-language questions about live stations by calling SQL tools on the database.</li>
         </ul>
         <ul class="tech-list">
-          <li>Python</li><li>SQL</li><li>BigQuery</li><li>dbt</li><li>LightGBM</li><li>FastAPI</li><li>Grafana</li>
+          <li>Python</li><li>SQL</li><li>BigQuery</li><li>dbt</li><li>Supabase</li><li>LightGBM</li><li>FastAPI</li><li>MCP</li><li>Grafana</li>
         </ul>
         <p class="status-note">In progress: adding weather features to the demand forecast and moving data collection to a cloud scheduler.</p>
         <div class="project-links">
@@ -190,8 +213,8 @@
           <h3>Sathyabama Institute of Science and Technology</h3>
           <span class="entry-date">May 2025</span>
         </div>
-        <p class="entry-org">B.E. in Computer Science and Engineering, Data Science specialization · Chennai, India · CGPA 8.1/10, First Class with Distinction</p>
-        <p class="edu-courses">Python, Machine Learning, Database Management Systems, Operating Systems</p>
+        <p class="entry-org">B.E. in Computer Science and Engineering, Data Science specialization · Chennai, India · CGPA 8.19/10, First Class with Distinction</p>
+        <p class="edu-courses">Python, R Programming, Machine Learning Essentials, Applied Machine Learning, Probability and Statistics, Time Series Analysis, Big Data Analytics, Natural Language Processing, Database Management Systems, Operating Systems</p>
       </li>
     </ul>
   </section>
@@ -204,15 +227,15 @@
     <div class="skill-groups">
       <div class="skill-group">
         <h3>Languages</h3>
-        <p>Python, SQL, TypeScript, JavaScript</p>
+        <p>Python, SQL, Go, TypeScript, JavaScript</p>
       </div>
       <div class="skill-group">
         <h3>Data Engineering</h3>
-        <p>dbt, BigQuery, PostgreSQL (Supabase), MongoDB Atlas, Airflow, Spark, Kafka, Google Cloud Run, ETL and API ingestion pipelines, data quality monitoring</p>
+        <p>dbt, BigQuery, Snowflake, PostgreSQL (Supabase), MongoDB Atlas, Airflow, Spark, Kafka, Google Cloud Run, ETL and API ingestion pipelines, data quality monitoring</p>
       </div>
       <div class="skill-group">
         <h3>Machine Learning &amp; AI</h3>
-        <p>scikit-learn, LightGBM, TensorFlow, time-series forecasting, anomaly detection, MLflow, LLMs (Groq), information retrieval (BM25, dense and hybrid)</p>
+        <p>LLM agents and tool calling, RAG, MCP servers, LLM evaluation, scikit-learn, LightGBM, TensorFlow, time-series forecasting, anomaly detection, MLflow, information retrieval (BM25, dense and hybrid)</p>
       </div>
       <div class="skill-group">
         <h3>Analytics &amp; Visualization</h3>
@@ -224,7 +247,7 @@
       </div>
       <div class="skill-group">
         <h3>Tools</h3>
-        <p>Git, GitHub, GitLab, GitHub Actions (CI/CD), Linux, Cursor, Claude Code</p>
+        <p>Git, GitHub, GitLab, GitHub Actions (CI/CD), Docker, pytest, Bandit, Ruff, Linux, Cursor, Claude Code</p>
       </div>
       <div class="skill-group">
         <h3>Certifications</h3>
